@@ -1,11 +1,16 @@
-from collections import Counter
 while True:
     print("""
     Для начала введите - 1
     Для выхода введите - 5
     """)
-    menu=(input())
+    menu=int(input())
     if menu == 5:
+        break
+        
+    elif menu == 1:
+        pass
+    else: 
+        print('Неправильный код!')
         break
     text = '[Введите диапазон чисел]' 
     print(' {:*^30} '.format(text))
@@ -15,7 +20,7 @@ while True:
 
 
     if str.isdigit(n1) == True and str.isdigit(n2) == True:
-        if n2 >= n1:
+        if int(n1) >= int(n2):
             print('Первое число не может быть больше или равно второму')
             break
         n1 = int(n1)
@@ -33,14 +38,9 @@ while True:
         x8 = int(0)
         x9 = int(0)
 
-    
-        
-        # Сопоставление всех чисел со строками?
         lists = list(range(n1, n2))
         result = str("".join([str(l) for l in lists]))
         print(result)
-        # Я не знаю как это работает, но я взял это отсюда: https://coderoad.ru/50807274/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0-%D1%86%D0%B5%D0%BB%D1%8B%D1%85-%D1%87%D0%B8%D1%81%D0%B5%D0%BB-%D0%B2-%D1%86%D0%B5%D0%BB%D0%BE%D0%B5-%D1%87%D0%B8%D1%81%D0%BB%D0%BE-python
-    
 
         for i in result:
             if i == '0':
